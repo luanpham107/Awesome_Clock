@@ -3,11 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Awesome_Clock.Views"
+        xmlns:local="clr-namespace:Awesome_Clock.Views"        
         mc:Ignorable="d"
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"        
-        Title="{Binding Title}" Height="450" Width="800" Background="#FF130101">
+        Title="{Binding Title}" Height="262.705" Width="311.885" Background="#FF130101" WindowStyle="ThreeDBorderWindow">
     <Window.Resources>
         <Style TargetType="TextBlock">
             <Setter Property="FontSize" Value="35"></Setter>
@@ -15,12 +15,17 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="{Binding Clock.CurrentTime.Hour, StringFormat={}{0:00}}"></TextBlock>
-            <TextBlock Text=":"></TextBlock>
-            <TextBlock Text="{Binding Clock.CurrentTime.Minute, StringFormat={}{0:00}}"></TextBlock>
-            <TextBlock Text=":"></TextBlock>
-            <TextBlock Text="{Binding Clock.CurrentTime.Second, StringFormat={}{0:00}}"></TextBlock>
-        </StackPanel>
+        <Grid Grid.Row="1">
+            <Image Source="D:\05_Projects\sharpProjects\Awesome_Clock\Asset\clockBackground.png" HorizontalAlignment="Left" VerticalAlignment="Center" Width="257" Height="239" Margin="23,-27,0,20"/>
+        </Grid>
+        <Grid Grid.Row="2">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" RenderTransformOrigin="-11.325,0.093">
+                <TextBlock Text="{Binding Clock.CurrentTime.Hour, StringFormat=\{0:00\}}"/>
+                <TextBlock Text=":"/>
+                <TextBlock Text="{Binding Clock.CurrentTime.Minute, StringFormat=\{0:00\}}"/>
+                <TextBlock Text=":"/>
+                <TextBlock Text="{Binding Clock.CurrentTime.Second, StringFormat=\{0:00\}}"/>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>
