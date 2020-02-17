@@ -16,7 +16,7 @@
     </Window.Resources>
     <Grid>
         <Grid Grid.Row="1">
-            <Image Source="D:\05_Projects\sharpProjects\Awesome_Clock\Asset\clockBackground.png" HorizontalAlignment="Left" VerticalAlignment="Center" Width="257" Height="239" Margin="23,-27,0,20"/>
+            <Image Source="..\Asset\clockBackground.png" HorizontalAlignment="Left" VerticalAlignment="Center" Width="257" Height="239" Margin="23,-27,0,20"/>
         </Grid>
         <Grid Grid.Row="2">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" RenderTransformOrigin="-11.325,0.093">

@@ -191,9 +191,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Asset\giphy.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Asset\clockBackground.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
